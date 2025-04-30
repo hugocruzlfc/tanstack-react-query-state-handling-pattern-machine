@@ -1,3 +1,9 @@
+import PostsLayout from "@/components/posts-layout";
+
 export default async function Home() {
-  return <div>hi</div>;
+  return (
+    <div>
+      <PostsLayout />
+    </div>
+  );
 }
