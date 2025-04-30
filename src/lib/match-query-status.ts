@@ -34,7 +34,7 @@ export function matchQueryStatus<T>(
   query: UseQueryResult<T>,
   options: {
     Loading: JSX.Element;
-    Errored: JSX.Element | ((error: unknown) => JSX.Element);
+    Errored: JSX.Element | ((error: Error) => JSX.Element);
     Empty: JSX.Element;
     Success: (
       data: UseQueryResult<T> & {
@@ -47,7 +47,7 @@ export function matchQueryStatus<T>(
   query: UseQueryResult<T>,
   options: {
     Loading: JSX.Element;
-    Errored: JSX.Element | ((error: unknown) => JSX.Element);
+    Errored: JSX.Element | ((error: Error) => JSX.Element);
     Success: (data: UseQueryResult<T>) => JSX.Element;
   }
 ): JSX.Element;
@@ -60,7 +60,7 @@ export function matchQueryStatus<T>(
     Success,
   }: {
     Loading: JSX.Element;
-    Errored: JSX.Element | ((error: unknown) => JSX.Element);
+    Errored: JSX.Element | ((error: Error) => JSX.Element);
     Empty?: JSX.Element;
     Success: (data: UseQueryResult<T>) => JSX.Element;
   }
